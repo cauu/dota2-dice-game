@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "dota2_dice_game",
     "private": true,
     "scripts": {
         "postinstall": "node scripts/install.js",
@@ -7,17 +7,26 @@
         "build": "run-p build:*",
         "build:panorama": "tsc --project content/panorama/scripts/custom_game/tsconfig.json",
         "build:vscripts": "tstl --project game/scripts/vscripts/tsconfig.json",
+        "build-p": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js",
         "dev": "run-p dev:*",
         "dev:panorama": "tsc --project content/panorama/scripts/custom_game/tsconfig.json --watch",
         "dev:vscripts": "tstl --project game/scripts/vscripts/tsconfig.json --watch"
     },
     "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/preset-react": "^7.13.13",
         "@moddota/dota-lua-types": "^4.10.0",
         "@moddota/panorama-types": "^1.9.0",
+        "babel-loader": "^8.2.2",
         "find-steam-app": "^1.0.2",
+        "fork-ts-checker-webpack-plugin": "^6.2.10",
         "fs-extra": "^9.0.0",
         "npm-run-all": "^4.1.5",
+        "ts-loader": "^9.2.1",
         "typescript": "^4.2.3",
-        "typescript-to-lua": "^0.39.3"
+        "typescript-to-lua": "^0.39.3",
+        "webpack": "^5.37.1",
+        "webpack-cli": "^4.7.0",
+        "webpack-panorama": "^0.2.0"
     }
 }

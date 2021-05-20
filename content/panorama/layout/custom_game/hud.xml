@@ -3,13 +3,26 @@
         <include src="file://{resources}/scripts/custom_game/hud.js" />
     </scripts>
     <styles>
-        <include src="s2r://panorama/styles/dotastyles.css" />
+        <!-- <include src="s2r://panorama/styles/dotastyles.css" /> -->
         <include src="file://{resources}/styles/custom_game/hud.css" />
     </styles>
     <snippets>
 
     </snippets>
-    <Panel hittest="false" class="MainHud">
-
+    <Panel hittest="false" class="MainHud"
+        style="height: 100%;width:100%;border:1px solid red;"
+    >
+        <DOTAScenePanel 
+            style="height:100px;width: 100px;border: 1px solid yellow;" 
+            unit="npc_dota_hero_sven"
+            particleonly="false"
+        />
+        <DOTAScenePanel 
+            style="height:500px;width: 500px;border: 1px solid yellow;" 
+            map="background"
+            camera="camera1"
+            light="light"
+            particleonly="false"
+        />
     </Panel>
 </root>
