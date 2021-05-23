@@ -1,4 +1,8 @@
 <root>
+  <styles>
+    <include src="file://{resources}/scripts/custom_game/hud/style.css"></include>
+  </styles>
+
   <scripts>
     <include src="file://{resources}/scripts/custom_game/hud.js"></include>
   </scripts>
