@@ -7,5 +7,6 @@
     <include src="file://{resources}/scripts/custom_game/hud.js"></include>
   </scripts>
 
-  <Button></Button>
+  <Panel hittest="false" style="height: 100%; width: 100%;">
+  </Panel>
 </root>

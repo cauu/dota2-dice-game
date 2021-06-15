@@ -28,11 +28,11 @@ function Entry () {
   /** Events */
   useGameEvent(PICKING_EVENTS.DONE, onPickingDone)
 
-  if (!isStarted) {
-    return <HeroSelectionLayout />
-  }
+  // if (!isStarted) {
+  return <HeroSelectionLayout />
+  // }
 
-  return <GameLayout />
+  // return <GameLayout />
 }
 
 render(<Entry />, $.GetContextPanel());

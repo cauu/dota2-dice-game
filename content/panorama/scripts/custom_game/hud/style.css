@@ -1,4 +1,47 @@
-.name {
-  height: 20px;
-  border: 1px solid blue;
+.hero-selection {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  border: 1px solid black;
+}
+.hero-selection__main {
+  width: 800px;
+  height: 100%;
+  position: 550px 0 0;
+  background-color: #151515;
+  flow-children: down;
+  color: #ffffff;
+  padding: 2% 0 5% 0;
+}
+.hero-selection__left-panel {
+  padding-top: 50px;
+  width: 500px;
+  height: 100%;
+  background-color: gradient(linear, -300% 100%, 100% 100%, from(#003300), to(#000000));
+  flow-children: down;
+}
+.hero-selection__right-panel {
+  padding-top: 50px;
+  width: 500px;
+  height: 100%;
+  background-color: gradient(linear, 300% 100%, 0% 100%, from(#330000), to(#000000));
+  horizontal-align: right;
+  flow-children: down;
+}
+.hero-selection__hero-list {
+  width: 100%;
+  height: 100%;
+  flow-children: down;
+  visibility: visible;
+}
+.hero-selection__hero-list__item {
+  width: 500px;
+  height: 100px;
+  horizontal-align: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  background-size: 100% 300%;
+  background-position: 0px -60px;
+  saturation: 0.3;
+  transition: desaturation 250ms ease 0ms, transform 250ms ease 0ms;
 }

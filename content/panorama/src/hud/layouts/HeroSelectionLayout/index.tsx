@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './style.less'
-
 const HERO_LIST = [
   {
     id: 'npc_dota_hero_antimage',
@@ -24,18 +22,21 @@ const HERO_LIST = [
 function HeroSelectionLayout () {
   return (
     <Panel className="hero-selection">
+      <Panel className="hero-selection__left-panel">
+      </Panel>
+
       <Panel className="hero-selection__main">
         <Panel className="hero-selection__timer">
-        <Label id='TimerTxt' text="" />
+          <Label id='TimerTxt' text="" />
         </Panel>
 
-        <Panel className="hero-selection__list">
+        <Panel className="hero-selection__hero-list">
           {
             HERO_LIST.map((hero) => {
               return (
                 <Panel id={hero.id}
                   key={hero.id}
-                  className="hero-selection__list-item"
+                  className="hero-selection__hero-list__item"
                   style={{backgroundImage: `url('${hero.img}')`}}
                 >
                 </Panel>
@@ -45,6 +46,8 @@ function HeroSelectionLayout () {
         </Panel>
       </Panel>
 
+      <Panel className="hero-selection__right-panel">
+      </Panel>
     </Panel>
   )
 }
