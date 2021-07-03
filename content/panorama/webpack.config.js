@@ -1,5 +1,6 @@
 const path = require('path');
 const { PanoramaTargetPlugin, PanoramaManifestPlugin } = require('webpack-panorama');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 /** @type {import('webpack').Configuration} */
@@ -33,7 +34,9 @@ module.exports = {
       { 
         test: /\.less$/, 
         use: [
-          { loader: 'file-loader', options: { name: '[path][name].css', esModule: false }},
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' },
+          // { loader: 'file-loader', options: { name: '[path][name].css', esModule: false }},
           { loader: 'less-loader' }
         ]
       }
@@ -53,6 +56,7 @@ module.exports = {
     //     { import: './hud/layout.xml', type: 'Hud' }
     //   ]
     // }),
+    new MiniCssExtractPlugin(),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
         configFile: path.resolve(__dirname, "tsconfig.json"),

@@ -1,6 +1,6 @@
 <root>
   <styles>
-    <include src="file://{resources}/scripts/custom_game/hud/style.css"></include>
+    <include src="file://{resources}/scripts/custom_game/hud.css"></include>
   </styles>
 
   <scripts>
