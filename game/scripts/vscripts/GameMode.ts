@@ -1,6 +1,8 @@
 import { reloadable } from "./lib/tstl-utils";
 import "./modifiers/modifier_panic";
 
+import HeroSelection from "./core/HeroSelection";
+
 const heroSelectionTime = 10;
 
 declare global {
@@ -54,6 +56,7 @@ export class GameMode {
         print("Game starting!");
 
         // Do some stuff here
+        new HeroSelection()
     }
 
     // Called on script_reload

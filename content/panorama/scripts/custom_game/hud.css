@@ -35,6 +35,12 @@
   background-color: #fff;
   background-size: 100% 300%;
   background-position: 0px -60px;
+  saturation: 0.3;
+  transition: transform 250ms ease 0ms;
+}
+.hero-selection__list-item:hover {
+  saturation: 1;
+  transform: translateX(20px);
 }
 .hero-selection__text {
   horizontal-align: center;
@@ -68,6 +74,27 @@
   horizontal-align: right;
   flow-children: down;
   z-index: -1;
+}
+.hero-selection__post-pick {
+  width: 100%;
+  height: 100%;
+  visibility: collapse;
+  flow-children: down;
+}
+.hero-selection__post-pick #EnterGameBtnTxt {
+  horizontal-align: center;
+  color: #fff;
+  font-size: 36px;
+}
+.hero-selection__post-pick #EnterGameBtn {
+  horizontal-align: center;
+  margin-top: 20px;
+  box-shadow: fill #00000066 -4px -4px 8px 8px;
+  background-color: gradient(linear, 0% 0%, 0% 100%, from(#5AA15E), to(#87d69533));
+  background-size: 320px 120px;
+  height: 55px;
+  width: 420px;
+  padding-top: 6px;
 }
 
 .name {
